@@ -1,18 +1,21 @@
 # Python Practice
 
 This repository contains my Python practice codes.  
-I use it to improve my programming basics and problem-solving skills.
+I use it to improve programming fundamentals and problem-solving skills.
 
-## Contents
-- day1.py : If/Else practice
-- day2.py : Loops and Lists
-- day3.py : Functions
-- day4.py : Find max/min in a list
-- day5.py : Sum and Average
-- day6.py : String manipulation (reverse, palindrome, etc.)
+## Topics Covered
+- Basic syntax: variables, operators, input/output
+- Conditional statements (if-else)
+- Loops (for, while, do-while style)
+- Lists and arrays
+- Functions
+- Finding max/min values
+- Summation and averages
+- String manipulation (reverse, palindrome, counting vowels)
+- Basic problem solving (FizzBuzz, counting even numbers, etc.)
 
 ## How to Run
 Clone this repository and run with Python 3:
 
 ```bash
-python day1.py
+python filename.py
