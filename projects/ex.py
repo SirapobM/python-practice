@@ -1,28 +1,121 @@
 # เขียนโปรแกรม รับค่าเลข 2 จำนวนจากผู้ใช้ (เช่น start และ end) แล้วให้โปรแกรม หาผลรวมของเลขคู่ ระหว่าง start ถึง end
-num_s = int(input("กรอกค่าเริ่มต้น : "))
-num_e = int(input("กรอกค่าสิ้นสุด : "))
+# num_s = int(input("กรอกค่าเริ่มต้น : "))
+# num_e = int(input("กรอกค่าสิ้นสุด : "))
 
-def cal(number_s, number_e):
-    sum = 0
-    for i in range(number_s, number_e+1):
-        if i % 2 == 0:
-            sum += i
-    return sum
+# def cal(number_s, number_e):
+#     sum = 0
+#     for i in range(number_s, number_e+1):
+#         if i % 2 == 0:
+#             sum += i
+#     return sum
 
 # result = cal(num_s, num_e)
 # print(f"ผลรวมของเลขคู่ระหว่าง {num_s} ถึง {num_e} คือ {result}")
 
+# --------------------------------------------------------------------------------------
 # เขียนโปรแกรมรับค่าเริ่มต้น (start) และสิ้นสุด (end) จากผู้ใช้ แล้วหาผลรวมของเลขคี่ทั้งหมดในช่วง
-num_start = int(input("กรอกค่าเริ่มต้น : "))
-num_end = int(input("กรอกค่าสิ้นสุด : "))
+# num_start = int(input("กรอกค่าเริ่มต้น : "))
+# num_end = int(input("กรอกค่าสิ้นสุด : "))
 
-def cal(num_s, num_e):
-    sum = 0
-    for i in range(num_s, num_e+1):
-        if i % 2 == 1:
-            sum += i
-    return sum
+# def cal(num_s, num_e):
+#     sum = 0
+#     for i in range(num_s, num_e+1):
+#         if i % 2 == 1:
+#             sum += i
+#     return sum
 
-result = cal(num_start, num_end)
-print(f"ผลรวมเลขคี่ : {result}")
+# result = cal(num_start, num_end)
+# print(f"ผลรวมเลขคี่ : {result}")
 
+# --------------------------------------------------------------------------------------
+# รับตัวเลขจากผู้ใช้ 5 ตัว แล้วบอกว่า ค่ามากที่สุด และ ค่าน้อยที่สุด คือเท่าไร
+# numbers = []
+
+# for i in range(1,6):
+#     number = int(input(f"ป้อนตัวเลข {i}: "))
+#     numbers.append(number)
+
+#     max_num = numbers[0]
+#     min_num = numbers[0]
+
+#     for i in numbers:
+#         if i > max_num:
+#             max_num = i
+#         elif i < min_num:
+#             min_num = i
+
+# print(f"ค่ามากที่สุดคือ {max_num}")
+# print(f"ค่าน้อยที่สุดคือ {min_num}")
+
+# --------------------------------------------------------------------------------------
+# รับค่าจำนวนเต็มจากผู้ใช้ 1 ตัว แล้วแสดง ตารางสูตรคูณของตัวเลขนั้น เช่นถ้าป้อน 7
+# num = int(input("ใส่เลขแม่สูตรคูณ : "))
+
+# def cal(number):
+#     for i in range(1,13):
+#         print(f"{number} x {i} = {number*i}")
+
+# cal(num)
+
+# --------------------------------------------------------------------------------------
+# ให้ผู้ใช้กรอกค่าเริ่มต้นและสิ้นสุด แล้วหาผลรวมของเลขที่หาร 3 ลงตัวทั้งหมด
+# num_start = int(input("กรอกค่าเริ่มต้น : "))
+# num_end = int(input("กรอกค่าสิ้นสุด : "))
+# sum = 0
+
+# for i in range(num_start, num_end+1):
+#     if i % 3 == 0:
+#         sum += i
+
+# print(sum)
+
+# --------------------------------------------------------------------------------------
+# เขียนโปรแกรมรับตัวเลขจากผู้ใช้ 5 ตัว แล้วหาค่าเฉลี่ยของตัวเลขเหล่านั้น
+# nums = []
+# total = 0
+
+# for i in range(1,6):
+#     num = int(input("กรอกเลข : "))
+#     nums.append(num)
+
+# for j in nums:
+#     total += j
+
+# average = total / len(nums)
+
+# print(average)
+
+# --------------------------------------------------------------------------------------
+# รับคะแนนจากผู้ใช้ 1 ค่า แล้วบอกว่าได้เกรดอะไร
+# point = int(input("ใส่คะแนน : "))
+
+# if point >= 80 and point <= 100:
+#     grade = 'A'
+# elif point >= 70 and point <= 79:
+#     grade = 'B'
+# elif point >= 60 and point <= 69:
+#     grade = 'C'
+# elif point >= 50 and point <= 59:
+#     grade = 'D'
+# else: 
+#     grade = 'F'
+
+# print(grade)
+
+# --------------------------------------------------------------------------------------
+# ให้ผู้ใช้กรอกค่าเริ่มต้นและสิ้นสุด แล้วนับว่าในช่วงนั้นมีเลขคู่กี่ตัว และเลขคี่กี่ตัว
+num_start = int(input("กรอกเลขเริ่มต้น : "))
+num_end = int(input("กรอกเลขสิ้นสุด : "))
+
+num_even = 0
+num_odd = 0
+
+for i in range(num_start, num_end +1):
+    if i % 2 == 0:
+        num_even += 1
+
+    elif i % 2 == 1:
+        num_odd += 1
+
+print(f"เลขคู่มี : {num_even}")
+print(f"เลขคี่มี : {num_odd}")
